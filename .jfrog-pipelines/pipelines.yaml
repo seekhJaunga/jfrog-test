@@ -9,9 +9,11 @@ pipelines:
       #       - echo "done"
       - name: trigger_2
         type: Bash
-        # configuration:
+        configuration:
+          inputIntegrations:
+            - name: artifactory
         #   chronological: true
-        #   inputSteps: 
+          # inputSteps: 
         #     - name: trigger_1
         execution:
           onExecute:
