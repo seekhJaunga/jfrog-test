@@ -1,18 +1,18 @@
 pipelines:
   - name: taskTest
     steps:
-      - name: trigger_1
-        type: Bash
-        execution:
-          onExecute:
-            - printenv
-            - echo "done"
+      # - name: trigger_1
+      #   type: Bash
+      #   execution:
+      #     onExecute:
+      #       - printenv
+      #       - echo "done"
       - name: trigger_2
         type: Bash
-        configuration:
-          chronological: true
-          inputSteps: 
-            - name: trigger_1
+        # configuration:
+        #   chronological: true
+        #   inputSteps: 
+        #     - name: trigger_1
         execution:
           onExecute:
             - task: jfrog/setup-jfrog-cli@v0.1.0
