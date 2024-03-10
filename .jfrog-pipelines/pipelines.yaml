@@ -10,7 +10,7 @@ pipelines:
       - name: trigger_2
         type: Bash
         configuration:
-          inputIntegrations:
+          integrations:
             - name: artifactory
         #   chronological: true
           # inputSteps: 
