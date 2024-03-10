@@ -1,10 +1,8 @@
 pipelines:
-  - name: single_test2
+  - name: taskTest
     steps:
       - name: trigger_1
         type: Bash
-        configuration:
-          affinityGroup: trigger
         execution:
           onExecute:
             - printenv
@@ -13,10 +11,10 @@ pipelines:
         type: Bash
         configuration:
           chronological: true
-          affinityGroup: trigger
           inputSteps: 
             - name: trigger_1
         execution:
           onExecute:
-            - printenv
-            - echo "Running second trigger done"
+            - task: jfrog/setup-jfrog-cli@v0.1.0
+              input:
+                version: "2.26.1"  
