@@ -36,3 +36,4 @@ pipelines:
               input:
                 version: "2.26.1"
             - jfrog -v
+            - jf -v
