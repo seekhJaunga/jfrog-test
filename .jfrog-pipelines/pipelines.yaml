@@ -30,6 +30,8 @@ pipelines:
           onExecute:
             - jfrog -v
             - jf -v
+            - ls -latrh $(which jfrog)
+            - ls -latrh $(which jf)
             - task: jfrog/setup-jfrog-cli@v0.1.0
               input:
                 version: "2.26.1"
