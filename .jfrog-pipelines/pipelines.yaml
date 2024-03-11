@@ -9,8 +9,8 @@
   #        commit: false
 pipelines:
   - name: taskTest
-    configuration:
-      jfrogCliVersion: 2
+    # configuration:
+    #   jfrogCliVersion: 2
     steps:
       # - name: trigger_1
       #   type: Bash
