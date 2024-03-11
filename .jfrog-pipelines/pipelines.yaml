@@ -1,12 +1,12 @@
-resources:
-  - name: gitRes
-    type: GitRepo
-    configuration:
-      gitProvider: finalTest
-      path: seekhJaunga/pipelineBasic
-      buildOn:
-         branchCreate: false
-         commit: false
+# resources:
+#   - name: gitRes
+#     type: GitRepo
+#     configuration:
+#       gitProvider: finalTest
+#       path: seekhJaunga/pipelineBasic
+#       buildOn:
+#          branchCreate: false
+#          commit: false
 pipelines:
   - name: taskTest
     steps:
