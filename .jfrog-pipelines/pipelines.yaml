@@ -9,6 +9,8 @@
   #        commit: false
 pipelines:
   - name: taskTest
+    configuration:
+      jfrogCliVersion: 2
     steps:
       # - name: trigger_1
       #   type: Bash
@@ -26,8 +28,9 @@ pipelines:
         #     - name: trigger_1
         execution:
           onExecute:
+            - jfrog -v
+            - jf -v
             - task: jfrog/setup-jfrog-cli@v0.1.0
               input:
                 version: "2.26.1"
             - jfrog -v
-            - jf -v
